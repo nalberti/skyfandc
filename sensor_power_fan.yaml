@@ -28,12 +28,19 @@ sensor:
         return 0.0;
       }
     disabled_by_default: true
-
-  - platform: integration
+  
+  - platform: total_daily_energy
     name: "${power_fan_name} Energy"
-    source_id: fan_power
-    unit_of_measurement: "Wh"
+    power_id: fan_power
+    unit_of_measurement: "kWh"
     device_class: "energy"
     state_class: "total_increasing"
-    accuracy_decimals: 1
-    time_unit: "s"
+    accuracy_decimals: 3
+    filters:
+      # Multiplication factor from W to kW is 0.001
+      - multiply: 0.001
+    disabled_by_default: true
+
+time:
+  - platform: homeassistant
+    id: homeassistant_time
