@@ -43,7 +43,7 @@ web_server:
 
 #Dashboard import if you want to adopt the device on your esphome dashboard
 dashboard_import:
-  package_import_url: github://jeggleston1981/skyfandc/micro_skyfan2.yaml
+  package_import_url: github://nalberti/skyfandc/micro_skyfan2.yaml
 
 api:
 
