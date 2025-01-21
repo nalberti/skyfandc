@@ -59,7 +59,7 @@ i2c:
   scan: true
 
 ota:
-  - platform: esphome
+  platform: esphome
   
 wifi:
   ap:
