@@ -57,8 +57,10 @@ i2c:
   sda: 4
   scl: 5
   scan: true
-ota:
 
+ota:
+  - platform: esphome
+  
 wifi:
   ap:
     password: ""
