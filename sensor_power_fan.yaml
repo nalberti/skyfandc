@@ -32,13 +32,13 @@ sensor:
   - platform: total_daily_energy
     name: "${power_fan_name} Energy"
     power_id: fan_power
-    unit_of_measurement: "kWh"
+    unit_of_measurement: "Wh"
     device_class: "energy"
     state_class: "total_increasing"
-    accuracy_decimals: 3
-    filters:
-      # Multiplication factor from W to kW is 0.001
-      - multiply: 0.001
+    accuracy_decimals: 1
+    # filters:
+    #   # Multiplication factor from W to kW is 0.001
+    #   - multiply: 0.001
     disabled_by_default: true
 
 time:
