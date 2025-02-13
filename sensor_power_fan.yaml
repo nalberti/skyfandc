@@ -30,7 +30,7 @@ sensor:
     disabled_by_default: true
   
   - platform: total_daily_energy
-    name: "${power_fan_name} Energy"
+    name: "$fan_name Energy"
     power_id: fan_power
     unit_of_measurement: "Wh"
     device_class: "energy"
